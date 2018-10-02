@@ -1,9 +1,12 @@
 float[] lines;
 
 void setup() {
-  size(1500, 1000);
+  size(1500,1000);
   background(255);
-  strokeWeight(0.2);
+  strokeWeight(0.5);
+  print(height);
+  print(width);
+  print(float(width/2));
   lines = new float[40];
   for (int i = 0; i < lines.length; i++) {
     lines[i] = pow(random(0,10),3);
@@ -15,28 +18,28 @@ boolean black=false;
 float xPos;
 float yPos;
 
-float x1 = 750;
-float y1 = 750;
-float r1 = 350;
-
-float x2 = 750;
-float y2 = 250;
-float r2 = 350;
-
-float pupilX1 = 720;
-float pupilY1 = 500;
-float pupilR1 = 50;
-
-float pupilX2 = 780;
-float pupilY2 = 500;
-float pupilR2 = 50;
 
 int[][] colours = {{255, 255, 255}, {191,36,36}};
 
 void draw() {
+  float x1 = width/2.0;
+  float y1 = height*3/4.0;
+  float r1 = 0.35/1.5*width;
+  
+  float x2 = float(width)/2.0;
+  float y2 = 1/4.0*height;
+  float r2 = 0.35/1.5*width;
+  
+  float pupilX1 = 720.0/1500.0*width;
+  float pupilY1 = height/2.0;
+  float pupilR1 = 0.05*height;
+  
+  float pupilX2 = 780.0/1500.0*width;
+  float pupilY2 = height/2.0;
+  float pupilR2 = 0.05*height;
+  
   if ((counter%50 == 0 && black) || counter%300 == 0) {
     black=!black;
-    print(counter);
   }
   if (black) {
     noFill();
@@ -45,12 +48,12 @@ void draw() {
     int[] colour = colours[int(random(0,2))];
     stroke(random(0,255), random(0,255), random(0,255));
   }
-  if (counter%4000 == 0 && counter != 0) {
+  /*if (counter%4000 == 0 && counter != 0) {
     r2 = 450;
     r1 = 450;
     y1 = 850;
     y2 = 150;
-  }
+  } */
 
   for (int i = 0; i < lines.length; i++) {
     xPos = random(0,width);
