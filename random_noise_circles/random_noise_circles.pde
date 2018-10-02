@@ -1,7 +1,7 @@
 float[] lines;
 
 void setup() {
-  size(1500,1000);
+  size(1600,800);
   background(255);
   strokeWeight(0.5);
   print(height);
