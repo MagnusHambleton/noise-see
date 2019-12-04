@@ -1,0 +1,12 @@
+---
+layout: p5js_render
+title: "Circles"
+date: 2019-09-01
+description: 
+image: /assets/images/circles.jpg
+author: Magnus Hambleton
+script: /assets/processing/circles/Circles.js
+tags: 
+  - processing
+---
+Randomly generated circles and arcs. Click the image to regenerate (only click once - it takes 1-2 seconds).
